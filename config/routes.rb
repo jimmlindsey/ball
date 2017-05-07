@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :posts
-  devise_for :users
+  devise_for :users, 
+                     :path => '', 
+                     :path_names => {:sign_in => 'login', :sign_up => 'signup', :sign_out => 'logout', :edit => 'profile'}
   
   resources :posts do
     member do
