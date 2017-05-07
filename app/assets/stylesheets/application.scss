@@ -1,0 +1,321 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$white:                           #ffffff;
+$black:                           #000000;
+$dark:                            #47535b;
+$medium:                          #7a8b8e;
+$light:                           #9a9da4;
+$primary:                         #f57d00;
+$border:                          #e9e9e9;
+$background:                      #fafafa;
+$facebook:                        #3b5998;
+
+
+// General
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: $background;
+  color: $medium;
+}
+
+h3 {
+  font-weight: 600;
+  color: $dark;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.alert {
+  border-radius: 0px;
+}
+
+a:link {
+  text-decoration: none;
+  color: $dark;
+}
+
+.alert {
+  text-align: center;
+  margin-bottom: 0px;
+  list-style: none;
+  border: none;
+}
+
+.alert.devise{
+  text-align: center;
+  margin-bottom: 20px;
+  list-style: none;
+  border: 2px solid $primary;
+  border-radius: 3px;
+}
+
+.post {
+  
+  h4 {
+  color: $dark;
+  font-weight: 600;
+  }
+  
+  p {
+    color: $medium;
+  }
+}
+
+.copy {
+  color: $dark;
+  margin-top: 40px;
+  
+  h2 {
+    font-weight: 700;
+  }
+  
+  h4 {
+    font-weight: 600;
+  }
+}
+
+.round-image-50 {
+    background-color: white;
+    border: 1px solid $border;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    img { width: 100% }
+}
+
+
+
+//Panel
+
+.panel {
+  border-radius: 0px;
+  box-shadow: none;
+  padding: 30px;
+}
+
+.panel.index {
+  margin: 60px auto;
+  padding: 0px;
+}
+
+.panel.show {
+  margin: 30px auto;
+  padding: 0px;
+}
+
+.panel-heading {
+  background-color: $primary;
+  border-radius: 0px;
+  padding: 2px 0px;
+  width: 100%;
+}
+
+.post.content {
+  padding: 1em 3em 3em 3em;
+}
+
+//Jumbotron
+
+.jumbotron {
+  max-width: 700px;
+  background-color: $white;
+  text-align: left;
+  margin-top: 80px;
+  border-radius: 3px;
+  padding: 30px;
+}
+
+//Button
+
+.btn.btn-primary {
+  border: 1px solid $primary;
+  border-radius: 3px;
+  background-color: $primary;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+}
+
+.btn.btn-default {
+  border: 1px solid $medium;
+  color: $dark;
+  box-shadow: none;
+}
+
+.btn.btn-nav {
+  border: 1px solid $primary;
+  border-radius: 3px;
+  background-color: $primary;
+  color: $white !important;
+  padding: 10px 25px 10px 25px;
+  margin-top: 0.23em;
+  vertical-align: middle;
+  
+  &:hover {
+    background-color: $white !important;
+    border: 2px solid $primary;
+    color: $dark !important;
+  }
+}
+
+
+//Footer
+
+.footer {
+  margin-top: 40px;
+  padding: 30px;
+  border-top: 1px solid $border;
+
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0px 10px;
+  }
+}
+
+
+//Navigation
+
+.navbar {
+  border-radius: 0px;
+  border-top: none;
+  border-bottom: 1px solid $border;
+  background-color: $white;
+  height: 70px;
+  padding-top: 10px;
+}
+
+.navbar-collapse.collapse {
+  display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
+}
+
+.navbar-right {
+  float: right!important;
+}
+
+
+
+//Input
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	width: 100%;
+	max-width: 100%;
+	height: 3em;
+	border: 2px solid $border;
+    border-radius: 3px !important;
+	padding: 0.5em;
+	margin: .5em 0 2em 0;
+    box-shadow: none;
+}
+
+textarea {
+	min-height: 10em;
+}
+
+input[type="submit"], .button {
+	outline: none;
+	background: $primary;
+	border: 2px solid $primary;
+    border-radius: 3px;
+    width: auto;
+    height: 3em;
+	text-align: center;
+	font-size: 1.1em;
+	color: $white;
+	text-decoration: none;
+	padding: 1em 2em;
+	&:hover {
+		border: 2px solid $primary;
+        background: $primary;
+		color: $white;
+	}
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+    border-color: $medium;
+    box-shadow: none;
+    outline: 0 none;
+}
+
+label {
+  color: #565a5c;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+select {
+  color: $dark;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid $border;
+  border-radius: 2px;
+  padding: 10px;
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+}
+
+.select:before {
+  content: '\25bc';
+  font-size: 1.2em;
+  position: absolute;
+  color: $medium;
+  top: 40px;
+  right: 30px;
+  transform: scale(0.84, 0.42);
+}
+
+input[type="checkbox"] {
+  height: 1.25em;
+  width: 1.25em;
+  margin-bottom: -0.25em;
+  margin-right: 5px;
+  vertical-align: top;
+  border: 1px solid $border;
+  border-radius: 2px;
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+}
+
+input[type="checkbox"]:checked:before {
+  content: "\2713";
+  position: absolute;
+  font-size: 0.95em;
+  text-align: center;
+  width: 1.25em;
+  color: $primary;
+}
+
+.input-group .form-control {
+    margin: 0px !important;
+}
