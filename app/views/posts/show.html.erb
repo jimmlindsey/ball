@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+    <span class="pull-right round-image-40"><%= image_tag(@post.user.avatar.url(:thumb)) %></span>
+    <span class="pull-right name"><small>Posted by <%= link_to @post.user.username, user_path %></small></span>
+     <br>
+      <div class="panel show">
+        <div class="panel-heading"></div>
+          <div class="post content">
+            <h4><%= @post.title %><br></h4>
+            <br>
+            <p><%= @post.body %></p>
+            <% if @post.url.present? %>
+            <div>
+              <% if user_signed_in? %><%= link_to 'Visit Link', @post.url, class: "btn btn-primary" %>
+              <% else %>
+              <%= link_to 'Sign In or Up to View Link', new_user_session_path, class: "btn btn-primary" %>
+              <% end %>
+              <br>
+            </div>
+            <% else %>
+            <% end %>
+            <br>
+            <div class="btn-group">
+                <%= link_to like_post_path(@post), method: :put, class: "btn btn-default btn-sm" do %>
+                  <span class="glyphicon glyphicon-chevron-up"></span>
+                  Upvote
+                  <%= @post.get_upvotes.size %>
+                <% end %>
+
+                <%= link_to dislike_post_path(@post), method: :put, class: "btn btn-default btn-sm" do %>
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                  Downvote
+                  <%= @post.get_downvotes.size %>
+                <% end %>
+              </div>
+            <br>
+            <br>
+            <% if @post.user == current_user %>
+            <div class="btn-group">
+              <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-default" %>
+              <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+            </div>
+          <% end %>
+          </div>
+      </div>
+  </div>
+</div>
