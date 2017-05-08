@@ -16,7 +16,9 @@
           <div>
             <span class="pull-left image-60"><%= image_tag(@user.avatar.url(:thumb)) %></span>
             <span class="user-info"><h3><%= @user.fullname %></h3></span>
+            <% if @user.location.present? %>
             <p><%= @user.position %> from <%= @user.location %></p>
+            <% end %>
             <br>
             <% if @user.player.present? %>
             <p>Plays like <%= @user.player %>.</p>

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
     <span class="pull-right round-image-40"><%= image_tag(@post.user.avatar.url(:thumb)) %></span>
-    <span class="pull-right name"><small>Posted by <%= link_to @post.user.username, user_path %></small></span>
+    <span class="pull-right name"><small>Posted by <%= link_to @post.user.username, user_path(@post.user, @post) %></small></span>
      <br>
       <div class="panel show">
         <div class="panel-heading"></div>
