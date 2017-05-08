@@ -4,6 +4,8 @@ Rails.application.routes.draw do
                      :path => '', 
                      :path_names => {:sign_in => 'login', :sign_up => 'signup', :sign_out => 'logout', :edit => 'profile'}
   
+  resources :users, only: [:show]
+  
   resources :posts do
     member do
       put "like", to: "posts#upvote"

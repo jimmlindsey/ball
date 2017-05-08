@@ -96,13 +96,45 @@ a:link {
 .round-image-50 {
     background-color: white;
     border: 1px solid $border;
-    border-radius: 25px;
-    -moz-border-radius: 25px;
-    -webkit-border-radius: 25px;
+ 
     height: 50px;
     width: 50px;
     overflow: hidden;
     img { width: 100% }
+}
+
+.round-image-40 {
+    background-color: white;
+    border: 1px solid $border;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    img { width: 100% }
+}
+
+.image-60 {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    overflow: hidden;
+    img { width: 100% }
+}
+
+.pull-right.name{
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.dime {
+  opacity: 0.4;
 }
 
 
@@ -173,9 +205,38 @@ a:link {
   vertical-align: middle;
   
   &:hover {
-    background-color: $white !important;
+    background-color: $primary !important;
     border: 2px solid $primary;
-    color: $dark !important;
+    color: $white !important;
+  }
+}
+
+.btn.btn-profile {
+  border: 1px solid $primary;
+  border-radius: 3px;
+  background-color: $primary;
+  color: $white !important;
+  padding: 10px 25px 10px 25px;
+  margin-top: 0.23em;
+  vertical-align: middle;
+  
+  &:hover {
+    background-color: $primary !important;
+    border: 2px solid $primary;
+    color: $white !important;
+  }
+}
+
+.btn.btn-post {
+  border: 1px solid $border;
+  color: $primary !important;
+  box-shadow: none;
+  line-height: 0.5em;
+  margin-top: 0.75em;
+  font-weight: 500;
+  
+  &:hover {
+    border: 2px solid $border;
   }
 }
 
@@ -207,7 +268,7 @@ a:link {
 }
 
 .navbar-collapse.collapse {
-  display: block!important;
+  display: block !important;
 }
 
 .navbar-nav>li, .navbar-nav {
