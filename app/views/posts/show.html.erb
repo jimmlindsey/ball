@@ -41,7 +41,42 @@
               <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
             </div>
           <% end %>
+          
+          <br>
+          <br>
+          <br>
+          <br>
+          
+          <% if @post.user.fullname.present? %>
+          <h4>Written by <%= @post.user.fullname %></h4>
+          <% end %>
+          
+          <hr>
+          <br>
+          <br>
+          <br>
+          
+          <%= simple_form_for [@post, Comment.new]  do |f| %>
+            <div class="field">
+              <%= f.text_area :body, rows: 5, cols: 25,  :placeholder => "Add a comment ..." %>
+            </div>
+            <br>
+            <%= f.submit "Add Comment", class: "btn btn-primary" %>
+          <% end %>
           </div>
+          
+          <div class="container">
+          <h3 class="comments_title">
+            <%= @post.comments.count %> Comments
+          </h3>
+          </div>
+          
+          <br>
+          
+          <div id="comments">
+            <%= render :partial => @post.comments %>
+          </div>
+          
       </div>
   </div>
 </div>

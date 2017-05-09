@@ -5,16 +5,18 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, 
          :validatable, :authentication_keys => [:login]
   
-  has_many :subscriptions, foreign_key: :follower_id, 
+  has_many :subscriptions, foreign_key: :follower_id,
                            dependent: :destroy
   has_many :leaders, through: :subscriptions
-  
+
   has_many :reverse_subscriptions, foreign_key: :leader_id,
                                    class_name: 'Subscription',
                                    dependent: :destroy
   has_many :followers, through: :reverse_subscriptions
   
   has_many :posts, dependent: :destroy
+  
+  has_many :comments
   
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
@@ -50,7 +52,7 @@ class User < ActiveRecord::Base
   def following?(leader)
     leaders.include? leader
   end
-  
+
   def follow!(leader)
     if leader != self && !following?(leader)
       leaders << leader

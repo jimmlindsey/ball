@@ -24,6 +24,10 @@ gem 'acts_as_votable', '~> 0.10.0'
 
 gem "paperclip", "~> 5.0.0"
 
+gem 'simple_form'
+
+gem 'record_tag_helper', '~> 1.0'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
