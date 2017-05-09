@@ -4,8 +4,8 @@
       <span class="pull-left round-image-40">
         <%= image_tag(comment.user.avatar.url(:thumb)) %>
       </span>&nbsp;
-      <span class="pull-right"><p><%= comment.body %></p></span>
       <p><small><%= time_ago_in_words(comment.created_at) %> ago by <%= link_to comment.user.username, user_path(comment.user) %></small></p>
+      <span class="pull-right"><p><%= comment.body %></p></span>   
     </div>
 
     <div class="btn-group pull-right">
