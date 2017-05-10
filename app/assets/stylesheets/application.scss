@@ -140,7 +140,14 @@ hr {
 .logo {
   font-weight: 600;
   margin-top: 12px;
+  margin-left: -8px;
 }
+
+//.tagline {
+ // font-size: 14px;
+  //margin-left: 70px;
+  //margin-top: -20px;
+//}
 
 
 
@@ -222,7 +229,6 @@ hr {
   background-color: $primary;
   color: $white !important;
   padding: 10px 25px 10px 25px;
-  margin-top: 0.23em;
   vertical-align: middle;
   
   &:hover {
@@ -290,6 +296,7 @@ hr {
 
 .navbar-right {
   float: right!important;
+  margin-top: 1px;
 }
 
 
