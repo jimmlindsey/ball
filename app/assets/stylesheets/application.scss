@@ -256,14 +256,21 @@ hr {
 
 .footer {
   margin-top: 40px;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-top: 1px solid $border;
 
   li {
     list-style: none;
     display: inline-block;
-    padding: 0px 10px;
+    padding: 0px 5px;
   }
+}
+
+.text-muted.pull-left {
+  margin-left: -25px;
 }
 
 
@@ -280,6 +287,10 @@ hr {
 
 .navbar-brand {
   margin-top: -12px;
+}
+
+.navbar-brand#logo {
+  margin-left: -25px;
 }
 
 .navbar-collapse.collapse {
