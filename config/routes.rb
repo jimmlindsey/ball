@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   end
   
   root to: "posts#index"
+  
+  get "privacy" => "pages#privacy"
+  
+  get "terms" => "pages#terms"
 end

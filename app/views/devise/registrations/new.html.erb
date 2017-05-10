@@ -28,7 +28,12 @@
         <%= f.submit "Sign up", :class => "btn btn-primary" %>
       </div>
     <% end %>
+    
+    <br>
+    
+    <small>Creating an account means you're okay with Hoopwall's <%= link_to "Terms of Service", terms_path %></small>
 
+    <br>
     <br>
 
     <%= render "devise/shared/links" %>

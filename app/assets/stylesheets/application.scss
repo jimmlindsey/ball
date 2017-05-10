@@ -137,6 +137,11 @@ hr {
   opacity: 0.4;
 }
 
+.logo {
+  font-weight: 600;
+  margin-top: 12px;
+}
+
 
 
 //Panel
@@ -265,6 +270,10 @@ hr {
   background-color: $white;
   height: 70px;
   padding-top: 10px;
+}
+
+.navbar-brand {
+  margin-top: -12px;
 }
 
 .navbar-collapse.collapse {
