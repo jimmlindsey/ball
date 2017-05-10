@@ -1,28 +1,30 @@
-<center>
-  <div class="jumbotron">
+<div class="container">
+   <center>
+    <div class="jumbotron">
 
-    <h3>Reset your password</h3>
+      <h3>Reset your password</h3>
 
-    <h5>Enter the email address for your Hoopwall account to be emailed a link to reset your password.</h5>
+      <h5>Enter the email address for your Hoopwall account to be emailed a link to reset your password.</h5>
 
-    <br>
+      <br>
 
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
 
-      <div class="actions">
-        <%= f.submit "Reset password", :class => "btn btn-primary" %>
-      </div>
-    <% end %>
+        <div class="actions">
+          <%= f.submit "Reset password", :class => "btn btn-primary" %>
+        </div>
+      <% end %>
 
-    <br>
+      <br>
 
-    <%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
 
-  </div>
-</center>
+    </div>
+  </center>
+</div>
