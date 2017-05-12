@@ -28,6 +28,10 @@ gem 'simple_form'
 
 gem 'record_tag_helper', '~> 1.0'
 
+gem 'sendgrid-rails', '~> 2.0', '>= 2.0.5'
+
+gem "figaro"
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
