@@ -52,9 +52,12 @@
             <hr>
             <% end %>
 
+            <% if user_signed_in? %>
             <br>
             <br>
             <br>
+            
+            
 
             <%= simple_form_for [@post, Comment.new]  do |f| %>
               <div class="field">
@@ -62,6 +65,7 @@
               </div>
               <br>
               <%= f.submit "Add Comment", class: "btn btn-primary" %>
+            <% end %>
             <% end %>
             </div>
 
@@ -80,7 +84,9 @@
         </div>
     </div>
     <br>
+    <br>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+     <h4 class="title" style="color: #7a8b8e">More Hoops</h4>
       <div class="panel show">
           <div class="panel-heading"></div>
             <div class="post content">
