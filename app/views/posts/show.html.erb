@@ -79,5 +79,16 @@
 
         </div>
     </div>
+    <br>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="panel show">
+          <div class="panel-heading"></div>
+            <div class="post content">
+              <span class="pull-left round-image-40 random"><%= image_tag(@random_post.user.avatar.url(:thumb)) %></span>
+              <h4><%= link_to @random_post.title, post_path(@random_post),  {:style => "color: #47535b"} %><br></h4>
+              <span class="pull-left name"><small>Posted by <%= link_to @random_post.user.username, user_path(@random_post.user, @post) %></small></span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

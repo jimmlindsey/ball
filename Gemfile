@@ -32,6 +32,8 @@ gem 'sendgrid-rails', '~> 2.0', '>= 2.0.5'
 
 gem "figaro"
 
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
