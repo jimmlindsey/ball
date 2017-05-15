@@ -36,6 +36,8 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 
+gem 'social-share-button'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
