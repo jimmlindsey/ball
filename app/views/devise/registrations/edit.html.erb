@@ -33,7 +33,7 @@
 
         <div class="form-group">
           <%= f.label :position %>
-          <%= f.text_field :position, :placeholder => "What position do you play?" %>
+          <%= f.select :position, [["Guard","Guard"], ["Guard-Forward","Guard-Forward"], ["Forward-Guard","Forward-Guard"], ["Center","Center"]], id: "position", prompt: "Select...", class: "form-control" %>
         </div>
 
         <div class="form-group">
