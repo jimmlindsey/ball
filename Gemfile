@@ -28,7 +28,7 @@ gem 'simple_form'
 
 gem 'record_tag_helper', '~> 1.0'
 
-gem 'sendgrid-rails', '~> 2.0', '>= 2.0.5'
+gem 'sendgrid-ruby'
 
 gem "figaro"
 
@@ -37,6 +37,8 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 
 gem 'social-share-button'
+
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -5,6 +5,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, 
          :validatable, :authentication_keys => [:login]
   
+  after_create :send_notification
+
+  def send_notification
+    MyMailer.new_user(self).deliver
+  end
+  
   has_many :subscriptions, foreign_key: :follower_id,
                            dependent: :destroy
   has_many :leaders, through: :subscriptions
@@ -47,6 +53,10 @@ class User < ActiveRecord::Base
     elsif conditions.has_key?(:username) || conditions.has_key?(:email)
       where(conditions.to_h).first
     end
+  end
+  
+  def admin?
+    role == "admin"
   end
   
   def following?(leader)

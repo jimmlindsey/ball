@@ -58,7 +58,7 @@ Rails.application.configure do
     address: 'smtp.sendgrid.net',
     port: 587,
     enable_starttls_auto: true,
-    user_name: 'hoopwall',
+    user_name: 'app68173796@heroku.com',
     password: 'Jumpman23',
     authentication: 'plain'
 }
