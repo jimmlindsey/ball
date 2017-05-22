@@ -25,7 +25,7 @@
               <p>Plays like <%= @user.player %>.</p>
               <% end %>
               <% if @user.instagram.present? %>
-              <%= link_to 'Instagram', @user.instagram %>
+              <%= link_to 'Instagram', @user.instagram, target: :_blank %>
               <% end %>
             </div>
             <br>
