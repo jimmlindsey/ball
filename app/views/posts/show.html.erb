@@ -12,7 +12,7 @@
               <p><%= @post.body %></p>
               <% if @post.url.present? %>
               <div>
-                <% if user_signed_in? %><%= link_to 'Visit Link', @post.url, class: "btn btn-primary" %>
+                <% if user_signed_in? %><%= link_to 'Visit Link', @post.url, class: "btn btn-primary", target: :_blank %>
                 <% else %>
                 <%= link_to 'Sign In or Up to View Link', new_user_session_path, class: "btn btn-primary" %>
                 <% end %>
