@@ -1,3 +1,21 @@
+<% content_for :head do %>
+  <title><%= @post.title %> | Hoopwall</title>
+  
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hoopwallhq">
+  <meta name="twitter:creator" content="@hoopwallhq">
+  <meta name="twitter:title" content="<%= @post.title %>">
+  <meta name="twitter:description" content="<%= @post.body %>">
+  
+  <!-- Open Graph data -->
+  <meta property="og:site_name" content="Hoopwall">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= @post.title %>">
+  <meta property="og:description" content="<%= @post.body %>">
+<% end %>
+  
+
 <div class="container">
    <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
